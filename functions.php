@@ -31,7 +31,7 @@ function mo_stf($cpt=null){
 		}
 		foreach ($filters_check_slugs as $filterslug) {
 			$title = $mostf_options[$filterslug.'-label'];
-			$poss = strstr($filterslug, 'imoveis');
+			$poss = strstr($filterslug, $cpt);
 			if ($poss) {
 				$filter = str_replace($cpt.'-', '', $filterslug);
 				checkbox_filters_simple($filter, $title);
